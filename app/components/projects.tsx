@@ -4,36 +4,55 @@ import React from "react";
 const Projects = () => {
   return (
     <div>
-      <section className="pt-36 pb-16 bg-slate-100">
+      <section id="blog" className="pt-36 pb-32 bg-slate-100">
         <div className="container">
-          <div className="w-full p-4">
+          <div className="w-full px-4">
             <div className="max-w-xl mx-auto text-center">
-              <h4 className="font-semibold text-lg text-primary">Portofolio</h4>
+              <h4 className="font-semibold text-lg text-primary">Blog</h4>
               <h2 className="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">
-                Project Terbaru
+                Terkini
               </h2>
               <p className="font-medium text-md text-secondary md:text-lg">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatem similique numquam quisquam placeat sequi ad, sapiente
-                repellat sed autem. Ducimus!
+                Ini adalah blog saya sendiri
               </p>
             </div>
           </div>
-          <div className="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-            <div className="mb-12 p-4 md:w-1/2">
-              <div className="rounded-md shadow-md overflow-hidden">
+          <div className="flex flex-wrap justify-center mt-10">
+            <div className="w-full px-4 lg:w-1/2 xl:w-1/3">
+              <div
+                className="bg-white rounded-xl overflow-hidden shadow-lg
+        mb-10"
+              >
                 <Image
                   src="/golden-kolak.jpg"
-                  alt="Landing page"
-                  width={640}
-                  height={317}
+                  alt="Golden Kolak"
+                  className="w-full"
+                  width={500}
+                  height={500}
                 />
-              </div>
-              <h3 className="font-semibold text-xl text-dark mt-5 mb-3">
-                Title 1
-              </h3>
-              <div className="font-medium text-base text-secondary">
-                Lorem ipsum dolor sit amet.
+
+                <div className="py-8 px-6">
+                  <h3>
+                    <a
+                      href="/blog/{{ $post->slug }}"
+                      className="block mb-3 font-semibold text-xl text-dark
+                    hover:text-primary truncate"
+                    >
+                      Title 1
+                    </a>
+                  </h3>
+                  <p className="font-medium text-base text-secondary mb-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Itaque, enim.
+                  </p>
+                  <a
+                    href="/blog/{{ $post->slug }}"
+                    className="font-medium text-sm text-white bg-primary
+                py-2 px-4 rounded-lg hover:opacity-80"
+                  >
+                    Baca Selengkapnya
+                  </a>
+                </div>
               </div>
             </div>
           </div>
